@@ -1,11 +1,6 @@
 import React from 'react'
-import './styles.scss'
+import HelloWorld from './components/HelloWorld'
 const App: React.FC = () => {
-    return (
-        <div className="wrapper">
-            <h1>tardeOapp</h1>
-            <h2>React 17 and TypeScript 4!🚀</h2>
-        </div>
-    )
+    return <HelloWorld></HelloWorld>
 }
 export default App
