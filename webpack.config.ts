@@ -31,11 +31,15 @@ const webpackConfig = (): Configuration => ({
                 options: {
                     transpileOnly: true,
                 },
-                exclude: /build/,
+                exclude: ['/build', '/node_modules'],
             },
             {
                 test: /\.s?css$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader'],
+            },
+            {
+                test: /\.(ttf|eot|svg)$/,
+                loader: 'file-loader',
             },
         ],
     },
