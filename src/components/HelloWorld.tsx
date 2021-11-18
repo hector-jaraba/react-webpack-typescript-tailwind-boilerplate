@@ -1,11 +1,15 @@
 import React from 'react'
 
-const HelloWorld: React.FC = () => {
-    return (
-        <div className="wrapper text-center text-red-400">
-            <h1>Happy development! ;)</h1>
-        </div>
-    )
+interface Props {
+  name: string
+}
+
+const HelloWorld = ({name}: Props) => {
+  return (
+    <div className="wrapper text-center text-red-400">
+      <h1>Happy development! ;) {name}</h1>
+    </div>
+  )
 }
 
 export default HelloWorld

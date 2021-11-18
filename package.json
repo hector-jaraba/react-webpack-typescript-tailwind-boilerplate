@@ -5,9 +5,11 @@
     "license": "MIT",
     "scripts": {
         "dev": "webpack-cli serve --mode=development --env development --open --hot",
-        "build": "webpack --mode=production --env production --progress",
+        "build": "webpack --config=webpack.config.ts --mode=development --env development --progress",
+        "build:prod": "webpack --config=webpack.prod.config.ts --mode=production --env production --progress",
         "format": "eslint src/**/*.tsx --fix",
-        "lint": "eslint --ext src/**/*.ts"
+        "lint": "eslint --ext src/**/*.ts",
+        "types": "tsc --noEmit"
     },
     "dependencies": {
         "react": "^17.0.2",
